@@ -5,26 +5,30 @@ const Footer = () => {
   return (
     <footer>
       <span>
-        Source:{" "}
-        <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+        Source:&nbsp;
+        <a
+          href="https://github.com/asim-imam/taqti-app"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Github
-        </a>{" "}
-        | By:{" "}
+        </a>
+        &nbsp; | By:&nbsp;
         <a
           href="https://linkedin.com/in/asim-imam-799b886/"
           target="_blank"
           rel="noopener noreferrer"
         >
           Asim Imam
-        </a>{" "}
-        | API used:{" "}
+        </a>
+        &nbsp; | API used:&nbsp;
         <a
           href="http://aruuz.com/home/api"
           target="_blank"
           rel="noopener noreferrer"
         >
           aruuz.com
-        </a>{" "}
+        </a>
       </span>
     </footer>
   );
