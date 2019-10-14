@@ -1,0 +1,214 @@
+.urdu {
+  font-family: "Noto Nastaliq Urdu Draft";
+  font-size: medium;
+  direction: rtl;
+}
+
+body {
+  overflow-y: scroll;
+}
+
+#spinner {
+  position: absolute;
+  top: 60vh;
+  right: 40vw;
+}
+.modal {
+  font-family: "Noto Nastaliq Urdu Draft";
+  direction: ltr;
+}
+
+.modal-body {
+  text-align: right;
+}
+
+.modal-lg {
+  width: 90vw;
+  max-width: 700px;
+}
+
+.modal .close {
+  color: red !important;
+}
+
+.modal-title {
+  font-size: large !important;
+}
+
+.input-text {
+  resize: both;
+  padding: 7px;
+  line-height: 2.2em;
+  direction: rtl;
+  font-family: "Noto Nastaliq Urdu Draft", "SelawikRegular";
+  color: #544949;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  white-space: pre-wrap;
+  overflow: auto;
+}
+
+.caption {
+  text-align: right;
+  margin-top: 20px;
+  color: #544949;
+}
+
+.custom-btn {
+  font-size: medium;
+  font-weight: 400 !important;
+  margin-left: 4px;
+  padding-bottom: 12px;
+}
+
+.custom-dark {
+  color: white;
+}
+
+.custom-light {
+  color: rgb(125, 131, 138) !important;
+}
+
+.kufic {
+  font-family: "MashqRegular";
+  font-size: 40px;
+  direction: rtl;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+}
+
+header {
+  min-height: 1px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  text-align: right;
+  width: 100%;
+  background-color: #fcead7;
+  color: #c16756;
+}
+
+footer {
+  height: 2em;
+  width: 100%;
+  margin-top: 30px;
+  text-align: center;
+  background-color: lightgray;
+  color: #544949;
+  font-size: small;
+  /* These fix a React quirk causing footer to not stay at bottom */
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+#root {
+  height: calc(100% - 2em);
+}
+
+.english {
+  font-family: "SelawikRegular";
+  font-size: medium;
+}
+
+.badge-token {
+  background-color: #fcead7 !important;
+  color: #9e4e3f !important;
+  font-size: medium !important;
+  font-weight: 400 !important;
+  font-family: "Noto Nastaliq Urdu Draft" !important;
+  direction: rtl !important;
+  padding: 14px 10px 7px 10px;
+}
+
+.token-box {
+  padding: 0px 0px 2px 0px;
+  margin: 0px;
+}
+
+.badge-metername {
+  background-color: #c16756 !important;
+  font-size: small !important;
+  font-family: "Noto Nastaliq Urdu Draft" !important;
+  direction: rtl !important;
+  padding: 10px;
+}
+
+.badge-exception {
+  font-size: medium !important;
+  font-family: "Noto Nastaliq Urdu Draft" !important;
+  direction: rtl !important;
+  padding: 10px;
+}
+
+.badge-status {
+  background-color: #fffbdd;
+  font-size: x-large !important;
+  font-family: "AnkaCoderNarrowRegular" !important;
+  max-width: 1.8em !important;
+  min-width: 1.8em !important;
+}
+
+.btn-up {
+  font-family: "AnkaCoderNarrowRegular" !important;
+  font-size: x-large !important;
+  font-weight: 400 !important;
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+
+.pass {
+  color: forestgreen !important;
+}
+
+.fail {
+  color: red !important;
+}
+
+.container {
+  width: 100%;
+  padding: 0px 12px 0px 12px;
+  margin: 0px;
+  display: flex;
+  overflow-x: auto;
+}
+
+.space-above {
+  margin-top: 10px;
+}
+
+.flex-row {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  margin-bottom: 3px;
+}
+
+textarea::-webkit-input-placeholder {
+  color: darkgray;
+}
+
+textarea:-moz-placeholder {
+  /* Firefox 18- */
+  color: darkgray;
+}
+
+textarea::-moz-placeholder {
+  /* Firefox 19+ */
+  color: darkgray;
+}
+
+textarea:-ms-input-placeholder {
+  color: darkgray;
+}
+
+textarea::placeholder {
+  color: darkgray;
+}

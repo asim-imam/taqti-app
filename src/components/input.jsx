@@ -1,0 +1,131 @@
+// Represents the part of markup that has the multi-line textarea
+// and its associated buttons (submit, keyboard img, paste samples)
+import React from "react";
+import Modal from "react-bootstrap/Modal";
+import KeyboardPic from "../kb_custom.png";
+import Res from "../resources";
+import { AppContext } from "../App";
+
+const Input = props => {
+  // read the context's value
+  const context = React.useContext(AppContext);
+
+  // initialize a couple of state variables
+  const [isModalVisible, setIsModalVisible] = React.useState(false);
+  const [sampleIndex, setSampleIndex] = React.useState(
+    Math.floor(Math.random() * Res.samples.length)
+  );
+
+  // This keeps the context synchronized with the UI inputs
+  const trackRawInput = event => {
+    context.setRawInput(event.target.value);
+  };
+
+  const populateSamplePoetry = () => {
+    // read the verse at the current index:
+    let sampleVerse = Res.samples[sampleIndex];
+    // increment current index, unless it is at last index, in which case set to 0:
+    let currIdx = sampleIndex;
+    let maxIdx = Res.samples.length - 1;
+    let nextIdx = currIdx === maxIdx ? 0 : currIdx + 1;
+    setSampleIndex(nextIdx);
+    // set the textarea's value to the sample text:
+    context.setRawInput(sampleVerse);
+  };
+
+  const onInputChanged = event => {
+    // Code adapted with some changes from https://github.com/awaisathar/yauk
+    // modified to avoid the use of jQuery.
+    let txt = event.target;
+    let map = Res.charMapping;
+    let last = "";
+    let pos = txt.selectionEnd;
+    let s = txt.value;
+    let isLastPos = pos === s.length;
+    if (last === s) return;
+    let S = [];
+    for (let x = 0; x < s.length; x++) {
+      let c = s.charAt(x);
+      S.push(map[c] || c);
+    }
+    txt.value = S.join("");
+    last = txt.value;
+    if (!isLastPos) {
+      txt.selectionStart = txt.selectionEnd = pos;
+    }
+  };
+
+  return (
+    <React.Fragment>
+      <Modal
+        show={isModalVisible}
+        onHide={() => setIsModalVisible(false)}
+        centered
+        dialogClassName="modal modal-lg"
+      >
+        <Modal.Header closeButton>
+          <Modal.Title className="text-center modal-title w-100">
+            {Res.modalCaption}
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <img
+            src={KeyboardPic}
+            alt="English to Urdu key mappings"
+            title={Res.modalHoverText}
+            width="100%"
+            height="100%"
+          />
+        </Modal.Body>
+      </Modal>
+      <div className="container" dir="rtl">
+        <div dir="rtl">
+          <textarea
+            id="poetryInput"
+            onInput={onInputChanged}
+            value={context.rawInput}
+            onChange={trackRawInput}
+            autoFocus
+            className="input-text"
+            rows="5"
+            cols="50"
+            placeholder={Res.placeHolderText}
+          ></textarea>
+        </div>
+      </div>
+      <div className="container" dir="rtl">
+        <div className="flex-row space-above" dir="rtl">
+          <button
+            type="button"
+            data-toggle="tooltip"
+            className="btn btn-primary custom-btn custom-dark urdu"
+            title="Submit input"
+            onClick={context.handleInputSubmit}
+          >
+            {Res.enterBtnCaption}
+          </button>
+          <button
+            type="button"
+            data-toggle="tooltip"
+            title="Show Urdu key chart"
+            className="btn btn-secondary custom-btn custom-dark urdu"
+            onClick={() => setIsModalVisible(true)}
+          >
+            {Res.keyLayoutBtnCaption}
+          </button>
+          <button
+            type="button"
+            data-toggle="tooltip"
+            title="Paste sample verse"
+            className="btn btn-light custom-btn custom-light urdu"
+            onClick={populateSamplePoetry}
+          >
+            {Res.captionSamplesBtn}
+          </button>
+        </div>
+      </div>
+    </React.Fragment>
+  );
+};
+
+export default Input;
