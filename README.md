@@ -1,4 +1,4 @@
-## Available Scripts
+## Taqti App
 
 This is a single-page application that lets the user input Urdu poetry for scansion (i.e., the process of analyzing the meters and feet of a line of poetry).
 
