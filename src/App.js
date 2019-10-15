@@ -83,14 +83,16 @@ const App = () => {
         show={isWarnVisible}
         onHide={() => setIsWarnVisible(false)}
         centered
-        dialogClassName="modal"
+        dialogClassName="mymodal"
       >
         <Modal.Header closeButton>
-          <Modal.Title className="text-center modal-title w-100">
+          <Modal.Title className="text-center mymodal-title w-100">
             {Res.warningModalCaption}
           </Modal.Title>
         </Modal.Header>
-        <Modal.Body>{Res.warningModalMessage}</Modal.Body>
+        <Modal.Body className="mymodal-body">
+          {Res.warningModalMessage}
+        </Modal.Body>
       </Modal>
       <Header />
       <CaptionRow captionText={Res.topCaption} />

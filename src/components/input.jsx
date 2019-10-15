@@ -59,16 +59,17 @@ const Input = props => {
     <React.Fragment>
       <Modal
         show={isModalVisible}
+        size="lg"
         onHide={() => setIsModalVisible(false)}
         centered
-        dialogClassName="modal modal-lg"
+        dialogClassName="mymodal mymodal-lg"
       >
         <Modal.Header closeButton>
-          <Modal.Title className="text-center modal-title w-100">
+          <Modal.Title className="text-center mymodal-title w-100">
             {Res.modalCaption}
           </Modal.Title>
         </Modal.Header>
-        <Modal.Body>
+        <Modal.Body className="mymodal-body-pic">
           <img
             src={KeyboardPic}
             alt="English to Urdu key mappings"
@@ -87,7 +88,7 @@ const Input = props => {
             onChange={trackRawInput}
             autoFocus
             className="input-text"
-            rows="5"
+            rows="4"
             cols="50"
             placeholder={Res.placeHolderText}
           ></textarea>
