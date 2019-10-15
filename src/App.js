@@ -78,7 +78,6 @@ const App = () => {
 
   return (
     <AppContext.Provider value={ctxItems}>
-      <a id="top"></a>
       <Modal
         show={isWarnVisible}
         onHide={() => setIsWarnVisible(false)}

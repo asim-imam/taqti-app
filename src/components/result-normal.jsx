@@ -17,14 +17,13 @@ const ResultNormal = props => {
       )}
       <div className="container" dir="rtl">
         <div style={{ marginTop: 8, marginBottom: 8 }}>
-          <a
-            href="#top"
+          <button
+            type="button"
+            onClick={() => window.scrollTo(0, 0)}
             className="btn btn-secondary btn-xs btn-up"
-            role="button"
-            aria-pressed="true"
           >
             &#x2191;
-          </a>
+          </button>
         </div>
       </div>
     </React.Fragment>
