@@ -9,6 +9,7 @@ export default class Res {
   static modalHoverText = "Mapping of English keys to Urdu letters";
   static enterBtnCaption = "درج کریں";
   static keyLayoutBtnCaption = "نقشۂ حروف";
+  static captionInfoBtn = "معلومات";
   static captionSamplesBtn = "نمونہ دیکھیں";
   static placeHolderText = "اشعار یہاں لکھیں...";
   static parseFailedMessage = "تقطیع ناکام";

@@ -5,7 +5,7 @@ import Res from "../resources";
 const Header = () => {
   return (
     <header>
-      <div className="kufic">{Res.headerTitle}</div>
+      <div className="kufic big-logo">{Res.headerTitle}</div>
     </header>
   );
 };

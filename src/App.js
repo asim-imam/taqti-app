@@ -96,7 +96,9 @@ const App = () => {
       <Header />
       <CaptionRow captionText={Res.topCaption} />
       <Input />
-      {fetching && <Spinner id="spinner" animation="border" variant="info" />}
+      {fetching && (
+        <Spinner id="spinner" animation="border" variant="secondary" />
+      )}
       {//Only render markup for results when fetching is done and results have
       // been updated into the state variables (which is done async by React):
       resultsReceived && rawResult && !fetching && <Results />}
