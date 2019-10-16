@@ -92,6 +92,34 @@ body {
   user-select: none; /* Standard */
 }
 
+.source-link {
+  float: left;
+  margin-top: 20px;
+  margin-left: 6px;
+  display: inline;
+}
+
+.btn-source {
+  padding: 0px 4px 1px 4px !important;
+  font-size: medium;
+  font-weight: 200 !important;
+  color: #c16756;
+  border: 1px solid #c16756;
+}
+
+.btn-source:hover {
+  color: white;
+  background: #c16756;
+  border: 1px solid #c16756;
+}
+
+.btn-source:focus,
+.btn-source:active {
+  outline: none;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
+
 header {
   min-height: 1px;
   overflow: hidden;
@@ -102,26 +130,6 @@ header {
   width: 100%;
   background-color: #fcead7;
   color: #c16756;
-}
-
-footer {
-  height: 2em;
-  width: 100%;
-  margin-top: 30px;
-  text-align: center;
-  background-color: lightgray;
-  color: #544949;
-  font-size: small;
-  /* These fix a React quirk causing footer to not stay at bottom */
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  right: 0;
-}
-
-.english {
-  font-family: "SelawikRegular";
-  font-size: medium;
 }
 
 .badge-token {
@@ -244,4 +252,14 @@ textarea::placeholder {
   -webkit-transition: none;
   transition: none;
   display: none;
+}
+
+.close-x-box {
+  display: inline !important;
+  float: left;
+}
+
+.close-x {
+  color: red !important;
+  font-family: "Consolas" !important;
 }

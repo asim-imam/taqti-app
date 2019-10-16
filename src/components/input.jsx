@@ -140,11 +140,10 @@ const Input = props => {
       <Collapse in={isInfoOpen}>
         <div id="example-collapse-text">
           {Res.helpText}
-          <span style={{ display: "inline", float: "left" }}>
+          <span className="close-x-box">
             <button
               type="button"
-              style={{ color: "red" }}
-              className="btn btn-link btn-sm english"
+              className="btn btn-link btn-sm close-x"
               onClick={() => setIsInfoOpen(!isInfoOpen)}
               aria-controls="example-collapse-text"
               aria-expanded={isInfoOpen}

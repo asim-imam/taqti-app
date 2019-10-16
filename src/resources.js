@@ -2,6 +2,7 @@ export default class Res {
   static headerTitle = "تقطيع";
   static topCaption = "اس آلے کے ذریعے اردو شعروں کی تقطیع کی جا سکتی ہے";
   static resultCaption = "نتائج";
+  static captionSrcLink = "ماخذ";
   static modalCaption = "انگریزی کلیدوں سے اردو حروف لکھنے کا نقشہ";
   static warningModalCaption = "انتباہ";
   static warningModalMessage =
