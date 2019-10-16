@@ -2,6 +2,7 @@
 // and its associated buttons (submit, keyboard img, paste samples)
 import React from "react";
 import Modal from "react-bootstrap/Modal";
+import Collapse from "react-bootstrap/Collapse";
 import KeyboardPic from "../kb_custom.png";
 import Res from "../resources";
 import { AppContext } from "../App";
@@ -11,6 +12,7 @@ const Input = props => {
   const context = React.useContext(AppContext);
 
   // initialize a couple of state variables
+  const [isInfoOpen, setIsInfoOpen] = React.useState(false);
   const [isModalVisible, setIsModalVisible] = React.useState(false);
   const [sampleIndex, setSampleIndex] = React.useState(
     Math.floor(Math.random() * Res.samples.length)
@@ -79,6 +81,7 @@ const Input = props => {
           />
         </Modal.Body>
       </Modal>
+
       <div className="container" dir="rtl">
         <div dir="rtl">
           <textarea
@@ -123,8 +126,34 @@ const Input = props => {
           >
             {Res.captionSamplesBtn}
           </button>
+          <button
+            type="button"
+            className="btn btn-outline-info custom-btn urdu"
+            onClick={() => setIsInfoOpen(!isInfoOpen)}
+            aria-controls="example-collapse-text"
+            aria-expanded={isInfoOpen}
+          >
+            {Res.captionInfoBtn}
+          </button>
         </div>
       </div>
+      <Collapse in={isInfoOpen}>
+        <div id="example-collapse-text">
+          {Res.helpText}
+          <span style={{ display: "inline", float: "left" }}>
+            <button
+              type="button"
+              style={{ color: "red" }}
+              className="btn btn-link btn-sm english"
+              onClick={() => setIsInfoOpen(!isInfoOpen)}
+              aria-controls="example-collapse-text"
+              aria-expanded={isInfoOpen}
+            >
+              X
+            </button>
+          </span>
+        </div>
+      </Collapse>
     </React.Fragment>
   );
 };
