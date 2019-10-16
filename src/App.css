@@ -230,14 +230,14 @@ textarea::placeholder {
 
 #example-collapse-text.show {
   position: absolute;
+  right: 12px;
   margin-bottom: 2px;
-  margin-left: 4px;
+  margin-left: 12px;
   text-align: right;
   font-family: "Noto Nastaliq Urdu Draft";
   line-height: 2.2em;
   font-size: smaller;
   padding: 10px;
-  right: 35px;
   white-space: normal;
   opacity: 1 !important;
   z-index: 99999;
@@ -245,7 +245,7 @@ textarea::placeholder {
   color: #544949;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border: 1px solid #fafafa !important;
-  min-height: 140px;
+  min-height: 115px;
   max-width: 480px;
 }
 

@@ -92,7 +92,7 @@ const Input = props => {
             onChange={trackRawInput}
             autoFocus
             className="input-text"
-            rows="4"
+            rows="3"
             cols="50"
             placeholder={Res.placeHolderText}
           ></textarea>
