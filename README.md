@@ -10,3 +10,7 @@ Technical details:
 4. The UI employs, _inter alia_, components from the Bootstrap and React-Bootstrap libraries.
 5. The English-to-Urdu keybord mapping is adapted (in a de-JQueryized form) from https://github.com/awaisathar/yauk.
 6. The Urdu font used in the UI is Google's Noto Nastaliq web font. (For more information, please see: https://www.google.com/get/noto/#nastaliq-aran).
+
+## Demo Instance:
+
+A demo of this app can be seen here: https://taqti.surge.sh
