@@ -45,7 +45,7 @@ body {
   padding: 7px;
   line-height: 2.2em;
   direction: rtl;
-  font-family: "Noto Nastaliq Urdu Draft", "SelawikRegular";
+  font-family: "Noto Nastaliq Urdu Draft";
   color: #544949;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -262,5 +262,5 @@ textarea::placeholder {
 
 .close-x {
   color: red !important;
-  font-family: "Consolas" !important;
+  font-family: "Arial" !important;
 }
