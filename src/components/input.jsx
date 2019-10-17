@@ -86,6 +86,7 @@ const Input = props => {
         <div dir="rtl">
           <textarea
             id="poetryInput"
+            autoCapitalize="none"
             onInput={onInputChanged}
             value={context.rawInput}
             onChange={trackRawInput}
