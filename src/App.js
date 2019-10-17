@@ -79,7 +79,6 @@ const App = () => {
   return (
     <AppContext.Provider value={ctxItems}>
       <Modal
-        animation={false}
         show={isWarnVisible}
         onHide={() => setIsWarnVisible(false)}
         centered

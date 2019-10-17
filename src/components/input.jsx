@@ -61,7 +61,6 @@ const Input = props => {
     <React.Fragment>
       <Modal
         show={isModalVisible}
-        animation={false}
         size="lg"
         onHide={() => setIsModalVisible(false)}
         centered
