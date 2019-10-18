@@ -83,7 +83,7 @@ const Input = props => {
       </Modal>
 
       <div className="container" dir="rtl">
-        <div dir="rtl">
+        <div dir="rtl" style={{ position: "relative", float: "right" }}>
           <textarea
             id="poetryInput"
             autoCapitalize="none"
@@ -96,23 +96,34 @@ const Input = props => {
             cols="50"
             placeholder={Res.placeHolderText}
           ></textarea>
+          <span
+            style={{
+              position: "absolute",
+              left: "0px"
+            }}
+          >
+            <button
+              type="button"
+              onClick={() => context.setRawInput("")}
+              className="btn btn-light btn-xs m-1 btn-erase"
+              tabIndex={-1}
+            >
+              X
+            </button>
+          </span>
         </div>
       </div>
       <div className="container" dir="rtl">
         <div className="flex-row space-above" dir="rtl">
           <button
             type="button"
-            data-toggle="tooltip"
             className="btn btn-primary custom-btn custom-dark urdu"
-            title="Submit input"
             onClick={context.handleInputSubmit}
           >
             {Res.enterBtnCaption}
           </button>
           <button
             type="button"
-            data-toggle="tooltip"
-            title="Show Urdu key chart"
             className="btn btn-secondary custom-btn custom-dark urdu"
             onClick={() => setIsModalVisible(true)}
           >
@@ -120,8 +131,6 @@ const Input = props => {
           </button>
           <button
             type="button"
-            data-toggle="tooltip"
-            title="Paste sample verse"
             className="btn btn-light custom-btn custom-light urdu"
             onClick={populateSamplePoetry}
           >

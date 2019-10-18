@@ -55,6 +55,20 @@ body {
   overflow: auto;
 }
 
+.btn-erase {
+  padding: 0px 5px !important;
+  font-size: small !important;
+  color: burlywood !important;
+  font-family: "Arial";
+}
+
+.btn-erase:focus,
+.btn-erase:active {
+  outline: none;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
+
 .caption {
   text-align: right;
   margin-top: 12px;
