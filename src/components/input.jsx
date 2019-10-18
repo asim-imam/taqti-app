@@ -81,9 +81,8 @@ const Input = props => {
           />
         </Modal.Body>
       </Modal>
-
       <div className="container" dir="rtl">
-        <div dir="rtl" style={{ position: "relative", float: "right" }}>
+        <div className="flex-row full-width">
           <textarea
             id="poetryInput"
             autoCapitalize="none"
@@ -93,24 +92,19 @@ const Input = props => {
             autoFocus
             className="input-text"
             rows="3"
-            cols="50"
+            cols="40"
             placeholder={Res.placeHolderText}
           ></textarea>
-          <span
-            style={{
-              position: "absolute",
-              left: "0px"
-            }}
-          >
+          <div className="erase-box">
             <button
               type="button"
               onClick={() => context.setRawInput("")}
-              className="btn btn-light btn-xs m-1 btn-erase"
+              className="btn btn-light btn-xs btn-erase"
               tabIndex={-1}
             >
               X
             </button>
-          </span>
+          </div>
         </div>
       </div>
       <div className="container" dir="rtl">

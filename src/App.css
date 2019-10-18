@@ -1,6 +1,7 @@
 .urdu {
   font-family: "Noto Nastaliq Urdu Draft";
   font-size: medium;
+  line-height: 1.8em;
   direction: rtl;
 }
 
@@ -43,22 +44,32 @@ body {
 .input-text {
   resize: both;
   padding: 7px;
-  line-height: 2.2em;
+  line-height: 2.3em;
   direction: rtl;
   font-family: "Noto Nastaliq Urdu Draft";
   color: #544949;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  width: 100%;
   white-space: pre-wrap;
   overflow: auto;
 }
 
+.erase-box {
+  padding: 0px !important;
+  margin: 0px !important;
+  vertical-align: top;
+  display: inline-block;
+}
+
 .btn-erase {
+  margin: -5px 2px 0px 0px !important;
   padding: 0px 5px !important;
   font-size: small !important;
-  color: burlywood !important;
+  font-family: "Arial" !important;
+  color: goldenrod !important;
+  border: 1px solid lightgray !important;
+  border-radius: 7px !important;
   font-family: "Arial";
 }
 
@@ -81,7 +92,7 @@ body {
   margin-left: 4px;
   padding-right: 8px !important;
   padding-left: 8px !important;
-  padding-bottom: 13px;
+  padding-bottom: 10px;
 }
 
 .custom-dark {
@@ -89,7 +100,8 @@ body {
 }
 
 .custom-light {
-  color: rgb(125, 131, 138) !important;
+  color: rgb(109, 109, 105) !important;
+  border: 1px solid rgb(220, 220, 223) !important;
 }
 
 .kufic {
@@ -218,6 +230,10 @@ header {
   align-items: stretch;
   flex-wrap: nowrap;
   margin-bottom: 3px;
+}
+
+.full-width {
+  width: 100%;
 }
 
 textarea::-webkit-input-placeholder {
