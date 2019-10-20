@@ -63,14 +63,11 @@ body {
 }
 
 .btn-erase {
-  margin: -5px 2px 0px 0px !important;
-  padding: 0px 5px !important;
+  margin-top: -5px !important;
+  padding: 1px 6px !important;
   font-size: small !important;
   font-family: "Arial" !important;
-  color: goldenrod !important;
-  border: 1px solid lightgray !important;
-  border-radius: 7px !important;
-  font-family: "Arial";
+  border-radius: 15px !important;
 }
 
 .btn-erase:focus,
@@ -214,7 +211,7 @@ header {
 
 .container {
   width: 100%;
-  padding: 0px 12px 0px 12px;
+  padding: 0px 9px 0px 9px;
   margin: 0px;
   display: flex;
   overflow-x: auto;

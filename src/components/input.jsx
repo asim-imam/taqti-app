@@ -95,16 +95,6 @@ const Input = props => {
             cols="40"
             placeholder={Res.placeHolderText}
           ></textarea>
-          <div className="erase-box">
-            <button
-              type="button"
-              onClick={() => context.setRawInput("")}
-              className="btn btn-light btn-xs btn-erase"
-              tabIndex={-1}
-            >
-              X
-            </button>
-          </div>
         </div>
       </div>
       <div className="container" dir="rtl">
@@ -139,6 +129,16 @@ const Input = props => {
           >
             {Res.captionInfoBtn}
           </button>
+          <div>
+            <button
+              type="button"
+              onClick={() => context.setRawInput("")}
+              className="btn btn-outline-warning btn-xs btn-erase"
+              tabIndex={-1}
+            >
+              X
+            </button>
+          </div>
         </div>
       </div>
       <Collapse in={isInfoOpen}>
