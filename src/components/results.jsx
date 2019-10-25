@@ -10,7 +10,7 @@ import ResultException from "./result-exception";
 const Results = () => {
   const context = React.useContext(AppContext);
   const isHttpOK = context.rawResult.status === 200;
-  const bodyObj = JSON.parse(context.rawResult.body);
+  const bodyObj = context.rawResult.body;
   const isTaqtiError = isHttpOK && bodyObj && bodyObj.Result === "ERROR";
   const hasResults = isHttpOK && bodyObj && !isTaqtiError;
 

@@ -24,11 +24,10 @@ const App = () => {
   // Callback to update state with the results from API call:
   const handleResponseReceived = response => {
     try {
-      let allOriginsHTTPCode = response.status;
-      let aruuzHTTPCode = response.data.status.http_code;
-      let responseBody = response.data.contents;
+      let httpCode = response.status;
+      let responseBody = response.data;
       let retval = {
-        status: Math.max(allOriginsHTTPCode, aruuzHTTPCode),
+        status: httpCode,
         body: responseBody
       };
       setRawResult(retval);

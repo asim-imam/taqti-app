@@ -14,21 +14,17 @@ export default class WebClient {
   }
 
   static getTaqti(txtLines, handler) {
-    // Using allOrigins site to bypass the CORS restriction that the
-    // browser imposes (viz. preventing direct calls to the API on
-    // aruuz.com because that site doesn't send the response header
-    // to indicate that it permits requests from external domains).
-    const allOriginsUrl = "https://api.allorigins.win/get";
+    // Using cors-anywhere as a proxy to bypass CORS restriction:
+    const corsAnywhereUrl = "https://cors-anywhere.herokuapp.com/";
     const textParam = txtLines.join("\n");
     const aruuzUrl =
       "http://aruuz.com/api/default/getislah?text=" +
       encodeURIComponent(textParam);
+    // the URL to send the request to is a concat of the cors anywhere
+    // with the actual target url:
+    const reqUrl = corsAnywhereUrl + aruuzUrl;
     axios
-      .get(allOriginsUrl, {
-        params: {
-          url: aruuzUrl
-        }
-      })
+      .get(reqUrl)
       .then(function(response) {
         handler(response);
       })
