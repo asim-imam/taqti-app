@@ -8,8 +8,8 @@ export default class WebClient {
     let allLines = input.split("\n");
     // select only lines that aren't whitespace:
     let txtLines = allLines
-      .filter(ln => ln.trim().length > 0)
-      .map(ln => ln.trim());
+      .filter((ln) => ln.trim().length > 0)
+      .map((ln) => ln.trim());
     return txtLines;
   }
 
@@ -18,17 +18,16 @@ export default class WebClient {
     const corsAnywhereUrl = "https://cors-anywhere.herokuapp.com/";
     const textParam = txtLines.join("\n");
     const aruuzUrl =
-      "http://aruuz.com/api/default/getislah?text=" +
-      encodeURIComponent(textParam);
+      "http://aruuz.com/api/default/getislah/" + encodeURIComponent(textParam);
     // the URL to send the request to is a concat of the cors anywhere
     // with the actual target url:
     const reqUrl = corsAnywhereUrl + aruuzUrl;
     axios
       .get(reqUrl)
-      .then(function(response) {
+      .then(function (response) {
         handler(response);
       })
-      .catch(function(error) {
+      .catch(function (error) {
         console.log("WebClient.getTaqti:: error=" + error);
       });
   }
